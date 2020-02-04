@@ -30,28 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.c3 = new System.Windows.Forms.PictureBox();
+            this.c2 = new System.Windows.Forms.PictureBox();
+            this.c1 = new System.Windows.Forms.PictureBox();
+            this.b3 = new System.Windows.Forms.PictureBox();
+            this.b2 = new System.Windows.Forms.PictureBox();
+            this.b1 = new System.Windows.Forms.PictureBox();
+            this.a3 = new System.Windows.Forms.PictureBox();
+            this.a2 = new System.Windows.Forms.PictureBox();
+            this.a1 = new System.Windows.Forms.PictureBox();
             this.staticTurnLabel = new System.Windows.Forms.Label();
             this.changingTurnLabel = new System.Windows.Forms.Label();
-            this.a1 = new System.Windows.Forms.PictureBox();
-            this.a2 = new System.Windows.Forms.PictureBox();
-            this.a3 = new System.Windows.Forms.PictureBox();
-            this.b1 = new System.Windows.Forms.PictureBox();
-            this.b2 = new System.Windows.Forms.PictureBox();
-            this.b3 = new System.Windows.Forms.PictureBox();
-            this.c1 = new System.Windows.Forms.PictureBox();
-            this.c2 = new System.Windows.Forms.PictureBox();
-            this.c3 = new System.Windows.Forms.PictureBox();
             this.gameEngine = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.a1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.a2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.a3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.b1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.b2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.b3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.b3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.b2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.b1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.a3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.a2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.a1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -80,69 +80,35 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(411, 362);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // staticTurnLabel
+            // c3
             // 
-            this.staticTurnLabel.AutoSize = true;
-            this.staticTurnLabel.Location = new System.Drawing.Point(259, 13);
-            this.staticTurnLabel.Name = "staticTurnLabel";
-            this.staticTurnLabel.Size = new System.Drawing.Size(32, 13);
-            this.staticTurnLabel.TabIndex = 1;
-            this.staticTurnLabel.Text = "Turn:";
+            this.c3.Location = new System.Drawing.Point(277, 244);
+            this.c3.Name = "c3";
+            this.c3.Size = new System.Drawing.Size(126, 110);
+            this.c3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.c3.TabIndex = 8;
+            this.c3.TabStop = false;
+            this.c3.Click += new System.EventHandler(this.playerPicksPosition);
             // 
-            // changingTurnLabel
+            // c2
             // 
-            this.changingTurnLabel.AutoSize = true;
-            this.changingTurnLabel.Location = new System.Drawing.Point(298, 12);
-            this.changingTurnLabel.Name = "changingTurnLabel";
-            this.changingTurnLabel.Size = new System.Drawing.Size(14, 13);
-            this.changingTurnLabel.TabIndex = 2;
-            this.changingTurnLabel.Text = "X";
+            this.c2.Location = new System.Drawing.Point(141, 244);
+            this.c2.Name = "c2";
+            this.c2.Size = new System.Drawing.Size(126, 110);
+            this.c2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.c2.TabIndex = 7;
+            this.c2.TabStop = false;
+            this.c2.Click += new System.EventHandler(this.playerPicksPosition);
             // 
-            // a1
+            // c1
             // 
-            this.a1.Location = new System.Drawing.Point(6, 6);
-            this.a1.Name = "a1";
-            this.a1.Size = new System.Drawing.Size(126, 110);
-            this.a1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.a1.TabIndex = 0;
-            this.a1.TabStop = false;
-            this.a1.Click += new System.EventHandler(this.playerPicksPosition);
-            // 
-            // a2
-            // 
-            this.a2.Location = new System.Drawing.Point(141, 6);
-            this.a2.Name = "a2";
-            this.a2.Size = new System.Drawing.Size(126, 110);
-            this.a2.TabIndex = 1;
-            this.a2.TabStop = false;
-            this.a2.Click += new System.EventHandler(this.playerPicksPosition);
-            // 
-            // a3
-            // 
-            this.a3.Location = new System.Drawing.Point(277, 6);
-            this.a3.Name = "a3";
-            this.a3.Size = new System.Drawing.Size(126, 110);
-            this.a3.TabIndex = 2;
-            this.a3.TabStop = false;
-            this.a3.Click += new System.EventHandler(this.playerPicksPosition);
-            // 
-            // b1
-            // 
-            this.b1.Location = new System.Drawing.Point(6, 125);
-            this.b1.Name = "b1";
-            this.b1.Size = new System.Drawing.Size(126, 110);
-            this.b1.TabIndex = 3;
-            this.b1.TabStop = false;
-            this.b1.Click += new System.EventHandler(this.playerPicksPosition);
-            // 
-            // b2
-            // 
-            this.b2.Location = new System.Drawing.Point(141, 125);
-            this.b2.Name = "b2";
-            this.b2.Size = new System.Drawing.Size(126, 110);
-            this.b2.TabIndex = 4;
-            this.b2.TabStop = false;
-            this.b2.Click += new System.EventHandler(this.playerPicksPosition);
+            this.c1.Location = new System.Drawing.Point(6, 244);
+            this.c1.Name = "c1";
+            this.c1.Size = new System.Drawing.Size(126, 110);
+            this.c1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.c1.TabIndex = 6;
+            this.c1.TabStop = false;
+            this.c1.Click += new System.EventHandler(this.playerPicksPosition);
             // 
             // b3
             // 
@@ -154,32 +120,75 @@
             this.b3.TabStop = false;
             this.b3.Click += new System.EventHandler(this.playerPicksPosition);
             // 
-            // c1
+            // b2
             // 
-            this.c1.Location = new System.Drawing.Point(6, 244);
-            this.c1.Name = "c1";
-            this.c1.Size = new System.Drawing.Size(126, 110);
-            this.c1.TabIndex = 6;
-            this.c1.TabStop = false;
-            this.c1.Click += new System.EventHandler(this.playerPicksPosition);
+            this.b2.Location = new System.Drawing.Point(141, 125);
+            this.b2.Name = "b2";
+            this.b2.Size = new System.Drawing.Size(126, 110);
+            this.b2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.b2.TabIndex = 4;
+            this.b2.TabStop = false;
+            this.b2.Click += new System.EventHandler(this.playerPicksPosition);
             // 
-            // c2
+            // b1
             // 
-            this.c2.Location = new System.Drawing.Point(141, 244);
-            this.c2.Name = "c2";
-            this.c2.Size = new System.Drawing.Size(126, 110);
-            this.c2.TabIndex = 7;
-            this.c2.TabStop = false;
-            this.c2.Click += new System.EventHandler(this.playerPicksPosition);
+            this.b1.Location = new System.Drawing.Point(6, 125);
+            this.b1.Name = "b1";
+            this.b1.Size = new System.Drawing.Size(126, 110);
+            this.b1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.b1.TabIndex = 3;
+            this.b1.TabStop = false;
+            this.b1.Click += new System.EventHandler(this.playerPicksPosition);
             // 
-            // c3
+            // a3
             // 
-            this.c3.Location = new System.Drawing.Point(277, 244);
-            this.c3.Name = "c3";
-            this.c3.Size = new System.Drawing.Size(126, 110);
-            this.c3.TabIndex = 8;
-            this.c3.TabStop = false;
-            this.c3.Click += new System.EventHandler(this.playerPicksPosition);
+            this.a3.Location = new System.Drawing.Point(277, 6);
+            this.a3.Name = "a3";
+            this.a3.Size = new System.Drawing.Size(126, 110);
+            this.a3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.a3.TabIndex = 2;
+            this.a3.TabStop = false;
+            this.a3.Click += new System.EventHandler(this.playerPicksPosition);
+            // 
+            // a2
+            // 
+            this.a2.Location = new System.Drawing.Point(141, 6);
+            this.a2.Name = "a2";
+            this.a2.Size = new System.Drawing.Size(126, 110);
+            this.a2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.a2.TabIndex = 1;
+            this.a2.TabStop = false;
+            this.a2.Click += new System.EventHandler(this.playerPicksPosition);
+            // 
+            // a1
+            // 
+            this.a1.Location = new System.Drawing.Point(6, 6);
+            this.a1.Name = "a1";
+            this.a1.Size = new System.Drawing.Size(126, 110);
+            this.a1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.a1.TabIndex = 0;
+            this.a1.TabStop = false;
+            this.a1.Click += new System.EventHandler(this.playerPicksPosition);
+            // 
+            // staticTurnLabel
+            // 
+            this.staticTurnLabel.AutoSize = true;
+            this.staticTurnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staticTurnLabel.Location = new System.Drawing.Point(278, 9);
+            this.staticTurnLabel.Name = "staticTurnLabel";
+            this.staticTurnLabel.Size = new System.Drawing.Size(67, 25);
+            this.staticTurnLabel.TabIndex = 1;
+            this.staticTurnLabel.Text = "Turn:";
+            // 
+            // changingTurnLabel
+            // 
+            this.changingTurnLabel.AutoSize = true;
+            this.changingTurnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changingTurnLabel.Location = new System.Drawing.Point(350, 9);
+            this.changingTurnLabel.Name = "changingTurnLabel";
+            this.changingTurnLabel.Size = new System.Drawing.Size(27, 25);
+            this.changingTurnLabel.TabIndex = 2;
+            this.changingTurnLabel.Text = "X";
             // 
             // Form1
             // 
@@ -192,15 +201,15 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.a1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.a2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.a3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.b1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.b2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.b3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.b3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.b2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.b1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.a3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.a2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.a1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

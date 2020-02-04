@@ -7,3 +7,12 @@ C:\Users\Sarah\codefellows\projects\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Prop
 C:\Users\Sarah\codefellows\projects\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.cache
 C:\Users\Sarah\codefellows\projects\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
 C:\Users\Sarah\codefellows\projects\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
+C:\Users\Sarah\codefellows\projects\TicTacToe\bin\Debug\TicTacToe.exe.config
+C:\Users\Sarah\codefellows\projects\TicTacToe\bin\Debug\TicTacToe.exe
+C:\Users\Sarah\codefellows\projects\TicTacToe\bin\Debug\TicTacToe.pdb
+C:\Users\Sarah\codefellows\projects\TicTacToe\obj\Debug\TicTacToe.csprojAssemblyReference.cache
+C:\Users\Sarah\codefellows\projects\TicTacToe\obj\Debug\TicTacToe.Form1.resources
+C:\Users\Sarah\codefellows\projects\TicTacToe\obj\Debug\TicTacToe.Properties.Resources.resources
+C:\Users\Sarah\codefellows\projects\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.cache
+C:\Users\Sarah\codefellows\projects\TicTacToe\obj\Debug\TicTacToe.exe
+C:\Users\Sarah\codefellows\projects\TicTacToe\obj\Debug\TicTacToe.pdb
