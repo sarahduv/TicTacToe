@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.staticTurnLabel = new System.Windows.Forms.Label();
-            this.changingTurnLabel = new System.Windows.Forms.Label();
-            this.gameEngine = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.c3 = new System.Windows.Forms.PictureBox();
             this.c2 = new System.Windows.Forms.PictureBox();
             this.c1 = new System.Windows.Forms.PictureBox();
@@ -43,6 +39,10 @@
             this.a3 = new System.Windows.Forms.PictureBox();
             this.a2 = new System.Windows.Forms.PictureBox();
             this.a1 = new System.Windows.Forms.PictureBox();
+            this.staticTurnLabel = new System.Windows.Forms.Label();
+            this.changingTurnLabel = new System.Windows.Forms.Label();
+            this.gameEngine = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.c3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c2)).BeginInit();
@@ -80,42 +80,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(411, 362);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // staticTurnLabel
-            // 
-            this.staticTurnLabel.AutoSize = true;
-            this.staticTurnLabel.BackColor = System.Drawing.Color.Transparent;
-            this.staticTurnLabel.Font = new System.Drawing.Font("Gisha", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.staticTurnLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.staticTurnLabel.Location = new System.Drawing.Point(278, 9);
-            this.staticTurnLabel.Name = "staticTurnLabel";
-            this.staticTurnLabel.Size = new System.Drawing.Size(62, 24);
-            this.staticTurnLabel.TabIndex = 1;
-            this.staticTurnLabel.Text = "Turn:";
-            // 
-            // changingTurnLabel
-            // 
-            this.changingTurnLabel.AutoSize = true;
-            this.changingTurnLabel.BackColor = System.Drawing.Color.Transparent;
-            this.changingTurnLabel.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changingTurnLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.changingTurnLabel.Location = new System.Drawing.Point(346, 5);
-            this.changingTurnLabel.Name = "changingTurnLabel";
-            this.changingTurnLabel.Size = new System.Drawing.Size(30, 30);
-            this.changingTurnLabel.TabIndex = 2;
-            this.changingTurnLabel.Text = "X";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(264, 440);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 25);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Reset Board";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.resetBoard);
             // 
             // c3
             // 
@@ -206,6 +170,42 @@
             this.a1.TabIndex = 0;
             this.a1.TabStop = false;
             this.a1.Click += new System.EventHandler(this.playerPicksPosition);
+            // 
+            // staticTurnLabel
+            // 
+            this.staticTurnLabel.AutoSize = true;
+            this.staticTurnLabel.BackColor = System.Drawing.Color.Transparent;
+            this.staticTurnLabel.Font = new System.Drawing.Font("Gisha", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staticTurnLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.staticTurnLabel.Location = new System.Drawing.Point(287, 9);
+            this.staticTurnLabel.Name = "staticTurnLabel";
+            this.staticTurnLabel.Size = new System.Drawing.Size(62, 24);
+            this.staticTurnLabel.TabIndex = 1;
+            this.staticTurnLabel.Text = "Turn:";
+            // 
+            // changingTurnLabel
+            // 
+            this.changingTurnLabel.AutoSize = true;
+            this.changingTurnLabel.BackColor = System.Drawing.Color.Transparent;
+            this.changingTurnLabel.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changingTurnLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.changingTurnLabel.Location = new System.Drawing.Point(342, 5);
+            this.changingTurnLabel.Name = "changingTurnLabel";
+            this.changingTurnLabel.Size = new System.Drawing.Size(30, 30);
+            this.changingTurnLabel.TabIndex = 2;
+            this.changingTurnLabel.Text = "X";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(264, 440);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 25);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Reset Board";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.resetBoard);
             // 
             // Form1
             // 

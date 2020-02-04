@@ -18,7 +18,7 @@ namespace TicTacToe
         public String winningPlayer;
         public bool hasWon = false;
         public bool draw = false;
-        public int maxInARow = 4;
+        public int maxInARow = 3;
 
         public Form1()
         {
@@ -43,7 +43,6 @@ namespace TicTacToe
                 possibleWinSix,
                 possibleWinSeven,
                 possibleWinEight,
-
             };
         }
 
@@ -66,11 +65,17 @@ namespace TicTacToe
                 {
                     hasWon = true;
                     MessageBox.Show("Player " + currentPlayer + " has won.");
+                    staticTurnLabel.Text = currentPlayer;
+                    changingTurnLabel.Text = "wins";
+                    return;
                 }
 
                 if (thereIsADraw())
                 {
                     MessageBox.Show("It's a draw");
+                    staticTurnLabel.Text = "Draw";
+                    changingTurnLabel.Text = "";
+                    return;
                 }
 
                 currentPlayer = "O";
@@ -85,6 +90,9 @@ namespace TicTacToe
                 {
                     hasWon = true;
                     MessageBox.Show("Player " + currentPlayer + " has won.");
+                    staticTurnLabel.Text = currentPlayer;
+                    changingTurnLabel.Text = "wins";
+                    return;
                 }
 
                 currentPlayer = "X";
@@ -145,6 +153,8 @@ namespace TicTacToe
                 currentPlayer = "X";
                 hasWon = false;
                 winningPlayer = null;
+                staticTurnLabel.Text = "Turn: ";
+                changingTurnLabel.Text = "X";
             }
         }
     }
