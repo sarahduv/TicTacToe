@@ -44,6 +44,7 @@ namespace TicTacToe
                 possibleWinSeven,
                 possibleWinEight,
 
+            };
         }
 
         private void playerPicksPosition(object sender, EventArgs e)
@@ -63,6 +64,7 @@ namespace TicTacToe
                 
                 if (checkForWin())
                 {
+                    hasWon = true;
                     MessageBox.Show("Player " + currentPlayer + " has won.");
                 }
 
@@ -81,6 +83,7 @@ namespace TicTacToe
 
                 if (checkForWin())
                 {
+                    hasWon = true;
                     MessageBox.Show("Player " + currentPlayer + " has won.");
                 }
 
