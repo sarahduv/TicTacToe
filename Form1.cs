@@ -16,6 +16,7 @@ namespace TicTacToe
         public PictureBox[] allTiles;
         public String winningPlayer;
         public bool hasWon = false;
+        public bool draw;
 
         public Form1()
         {
@@ -25,6 +26,12 @@ namespace TicTacToe
 
         private void playerPicksPosition(object sender, EventArgs e)
         {
+            if (hasWon || draw)
+            {
+                MessageBox.Show("Reset the game");
+                return;
+            }
+                
             var tileToPlay = (PictureBox)sender;
 
             if (currentPlayer == "X" && tileToPlay.Tag == null)
@@ -101,15 +108,18 @@ namespace TicTacToe
 
         public bool thereIsADraw()
         {
-            for(var tile = 0; tile < allTiles.Length; tile++)
+            bool allTilesTakenWithNoWin = true;
+
+            for (var tile = 0; tile < allTiles.Length; tile++)
             {
                 if (allTiles[tile].Tag == null)
                 {
-                    return false;
+                    allTilesTakenWithNoWin = false;
+                    return allTilesTakenWithNoWin;
                 }
             }
-
-            return true;
+            draw = true;
+            return allTilesTakenWithNoWin;
         }
 
         private void resetBoard(object sender, EventArgs e)
