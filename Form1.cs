@@ -14,14 +14,36 @@ namespace TicTacToe
     {
         public String currentPlayer = "X";
         public PictureBox[] allTiles;
+        public PictureBox[][] possibleWins;
         public String winningPlayer;
         public bool hasWon = false;
-        public bool draw;
+        public bool draw = false;
+        public int maxInARow = 4;
 
         public Form1()
         {
             InitializeComponent();
             allTiles = new PictureBox[9] { a1, a2, a3, b1, b2, b3, c1, c2, c3 };
+
+            var possibleWinOne = new PictureBox[3] { a1, a2, a3 };
+            var possibleWinTwo = new PictureBox[3] { b1, b2, b3 };
+            var possibleWinThree = new PictureBox[3] { c1, c2, c3 };
+            var possibleWinFour = new PictureBox[3] { a1, b1, c1 };
+            var possibleWinFive = new PictureBox[3] { a2, b2, c2 };
+            var possibleWinSix = new PictureBox[3] { a3, b3, c3 };
+            var possibleWinSeven = new PictureBox[3] { a1, b2, c3 };
+            var possibleWinEight = new PictureBox[3] { a3, b2, c1 };
+
+            possibleWins = new PictureBox[][] {
+                possibleWinOne,
+                possibleWinTwo,
+                possibleWinThree,
+                possibleWinFour,
+                possibleWinFive,
+                possibleWinSix,
+                possibleWinSeven,
+                possibleWinEight,
+
         }
 
         private void playerPicksPosition(object sender, EventArgs e)
@@ -73,37 +95,26 @@ namespace TicTacToe
 
         private bool checkForWin()
         {
-            if ((String)a1.Tag == "X" && (String)a2.Tag == "X" && (String)a3.Tag == "X" ||
-                ((String)b1.Tag == "X" && (String)b2.Tag == "X" && (String)b3.Tag == "X") ||
-                ((String)c1.Tag == "X" && (String)c2.Tag == "X" && (String)c3.Tag == "X") ||
-                ((String)a1.Tag == "X" && (String)b1.Tag == "X" && (String)c1.Tag == "X") ||
-                ((String)a2.Tag == "X" && (String)b2.Tag == "X" && (String)c2.Tag == "X") ||
-                ((String)a3.Tag == "X" && (String)b3.Tag == "X" && (String)c3.Tag == "X") ||
-                ((String)a1.Tag == "X" && (String)b2.Tag == "X" && (String)c3.Tag == "X") ||
-                ((String)a3.Tag == "X" && (String)b2.Tag == "X" && (String)c1.Tag == "X"))
+            var validInARow = 0;
+            for (var possibleWin = 0; possibleWin < possibleWins.Length; possibleWin++)
             {
-                winningPlayer = "X";
-                hasWon = true;
-                return hasWon;
+                validInARow = 0;
+
+                for (var index = 0; index < possibleWins[possibleWin].Length; index++)
+                {
+                    if ((String)possibleWins[possibleWin][index].Tag == currentPlayer)
+                    {
+                        validInARow++;
+
+                        if (validInARow >= maxInARow)
+                        {
+                            winningPlayer = currentPlayer;
+                            return true;
+                        }
+                    }
+                }
             }
-           
-            else if ((String)a1.Tag == "O" && (String)a2.Tag == "O" && (String)a3.Tag == "O" ||
-                ((String)b1.Tag == "O" && (String)b2.Tag == "O" && (String)b3.Tag == "O") ||
-                ((String)c1.Tag == "O" && (String)c2.Tag == "O" && (String)c3.Tag == "O") ||
-                ((String)a1.Tag == "O" && (String)b1.Tag == "O" && (String)c1.Tag == "O") ||
-                ((String)a2.Tag == "O" && (String)b2.Tag == "O" && (String)c2.Tag == "O") ||
-                ((String)a3.Tag == "O" && (String)b3.Tag == "O" && (String)c3.Tag == "O") ||
-                ((String)a1.Tag == "O" && (String)b2.Tag == "O" && (String)c3.Tag == "O") ||
-                ((String)a3.Tag == "O" && (String)b2.Tag == "O" && (String)c1.Tag == "O"))
-            {
-                winningPlayer = "O";
-                hasWon = true;
-                return hasWon;
-            }
-            else
-            {
-                return hasWon;
-            }
+            return false;
         }
 
         public bool thereIsADraw()
