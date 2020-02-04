@@ -111,5 +111,17 @@ namespace TicTacToe
 
             return true;
         }
+
+        private void resetBoard(object sender, EventArgs e)
+        {
+            for (var tile = 0; tile < allTiles.Length; tile++)
+            {
+                allTiles[tile].Tag = null;
+                allTiles[tile].Image = null;
+                currentPlayer = "X";
+                hasWon = false;
+                winningPlayer = null;
+            }
+        }
     }
 }
